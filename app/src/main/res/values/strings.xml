@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SBook</string>
+    <!-- activity_splash.xml -->
+    <string name="brandSplash">SBOOK</string>
+    <string name="image_sbook"></string>
+
+    <!-- activity_login.xml -->
+    <string name="label_iniciar_sesion">Iniciar Sesion</string>
+    <string name="placeholder_usuario">Correo</string>
+    <string name="placeholder_clave">Contrasenia</string>
+    <string name="btn_iniciar_sesion">Ingresar</string>
+    <string name="text_no_tienes_cuenta">¿No tienes cuenta? Registrate</string>
+
+    <!-- activity_signup.xml -->
+    <string name="label_registrarse">Crea una cuenta</string>
+    <string name="placeholder_nombre">Nombre</string>
+    <string name="placeholder_confirmar_clave">Confirmar Contrasenia</string>
+    <string name="btn_registrar_cuenta">Registrar</string>
+    <string name="text_tengo_cuenta">Ya tengo una cuenta</string>
+
+</resources>

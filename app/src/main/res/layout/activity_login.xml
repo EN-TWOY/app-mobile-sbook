@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="201dp"
+        android:layout_height="173dp"
+        android:layout_gravity="center|top"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/image_sbook"
+        android:src="@drawable/sbook" />
+
+    <TextView
+        android:id="@+id/textViewSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/label_iniciar_sesion"
+        android:textAllCaps="false"
+        android:textColor="@color/color_sbook"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- Contenedor para agrupar los campos y el botón -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idUsuarioLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/placeholder_usuario"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idClaveLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/placeholder_clave"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            android:layout_width="348dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/bg_iniciar_sesion"
+            android:text="@string/btn_iniciar_sesion" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/idNoTienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="17dp"
+        android:clickable="true"
+        android:text="@string/text_no_tienes_cuenta"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+</LinearLayout>
