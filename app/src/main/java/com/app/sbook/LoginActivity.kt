@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
             val password = edClaveLogin.text.toString()
             when {
                 password.isEmpty() || email.isEmpty() -> {
-                    Toast.makeText(this, "Los datos ingresados están vacios o no son validos", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Los datos ingresados están vacios!", Toast.LENGTH_SHORT).show()
                 } else -> {
                     signIn(email, password)
                 }
@@ -53,10 +53,10 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) {task ->
             if (task.isSuccessful){
                 val user = firebaseAuth.currentUser
-                Toast.makeText(baseContext, "Inicio de sesion exitoso.", Toast.LENGTH_LONG).show()
+                Toast.makeText(baseContext, "Inicio de sesion exitoso.", Toast.LENGTH_SHORT).show()
                 nextActivityMain()
             } else {
-                Toast.makeText(baseContext, "Error de Correo y/o Contrasenia!", Toast.LENGTH_LONG).show()
+                Toast.makeText(baseContext, "Error de Correo y/o Contrasenia!", Toast.LENGTH_SHORT).show()
             }
         }
     }

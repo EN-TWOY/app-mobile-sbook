@@ -85,10 +85,10 @@ class AddBookActivity : AppCompatActivity() {
                         showConfirmationAddBook(nombre, autor, anio)
                     }
                 } else {
-                    Toast.makeText(this, "Ingrese un anio valido de 4 digitos", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Ingrese un anio valido de 4 digitos", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -137,11 +137,11 @@ class AddBookActivity : AppCompatActivity() {
                     }
                     .addOnFailureListener { exception ->
                         pd.dismiss()
-                        Toast.makeText(this, "Error al actualizar el libro!: ${exception.message}", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Error al actualizar el libro!: ${exception.message}", Toast.LENGTH_SHORT).show()
                     }
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this, "Error: ${exception.message}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Error: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
 
@@ -161,15 +161,15 @@ class AddBookActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     pd.dismiss()
-                    Toast.makeText(this, "¡Registro exitoso del libro!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "¡Registro exitoso del libro!", Toast.LENGTH_SHORT).show()
                     limpiarCampos()
                 } else {
                     val exception = task.exception
-                    Toast.makeText(baseContext, "Error al cargar los datos. Por favor, intenta nuevamente.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(baseContext, "Error al cargar los datos. Por favor, intenta nuevamente.", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this, "Error al cargar los datos: ${exception.message}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Error al cargar los datos: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
 

@@ -7,7 +7,7 @@ import android.os.Handler
 
 class SplashActivity : AppCompatActivity() {
     // Duracion de 8 segundos de carga de la SplashActivity
-    private val splashDuracion: Long = 8000
+    private val splashDuracion: Long = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
